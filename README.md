@@ -3,7 +3,7 @@
 A high-end web calculator featuring **Glassmorphism** and **Neumorphic** design principles. Built with a focus on sleek UX and tactile feedback.
 
 ## 🚀 Live Demo
-[Open Calculator](https://kishoreyadla100-ux.github.io/my-calculator/)
+[Open Calculator](my-calculator-six.vercel.app)
 
 ## ✨ Features
 * **3D Visuals**: Buttons that physically "press" down.
