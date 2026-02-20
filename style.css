@@ -1,0 +1,77 @@
+:root {
+    --glass: rgba(255, 255, 255, 0.1);
+    --border: rgba(255, 255, 255, 0.2);
+    --text: #ffffff;
+}
+
+body {
+    background: #050505;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    overflow: hidden;
+}
+
+/* Background Decorations */
+.glow-1 { position: absolute; width: 300px; height: 300px; background: #3498db; filter: blur(100px); top: 10%; left: 20%; z-index: -1; }
+.glow-2 { position: absolute; width: 300px; height: 300px; background: #9b59b6; filter: blur(100px); bottom: 10%; right: 20%; z-index: -1; }
+
+.calculator {
+    background: var(--glass);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--border);
+    border-radius: 25px;
+    padding: 30px;
+    width: 340px;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+}
+
+.display-container {
+    background: rgba(0,0,0,0.2);
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    box-shadow: inset 4px 4px 10px rgba(0,0,0,0.3);
+}
+
+#history { height: 20px; color: rgba(255,255,255,0.4); text-align: right; font-size: 14px; }
+#main-display {
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--text);
+    font-size: 40px;
+    text-align: right;
+}
+
+.keypad {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+button {
+    height: 65px;
+    border-radius: 15px;
+    border: 1px solid var(--border);
+    background: var(--glass);
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    box-shadow: 4px 4px 10px rgba(0,0,0,0.2), -2px -2px 10px rgba(255,255,255,0.05);
+}
+
+/* 3D Press Effect */
+button:active {
+    transform: scale(0.92) translateY(2px);
+    box-shadow: inset 4px 4px 8px rgba(0,0,0,0.3);
+}
+
+.btn-op { background: rgba(243, 156, 18, 0.3); color: #f39c12; font-weight: bold; }
+.btn-eq { background: #27ae60; grid-column: span 2; width: 100%; }
+.btn-util { background: rgba(231, 76, 60, 0.2); color: #e74c3c; }
